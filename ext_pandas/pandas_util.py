@@ -16,5 +16,5 @@ def write_excel(full_filename: str, data_list: [{}], sheet_name: str):
     else:
         writer = pd.ExcelWriter(full_filename, mode='w')
     data_frame = pd.DataFrame(data_list)
-    data_frame.to_excel(writer, sheet_name=sheet_name)
+    data_frame.to_excel(writer, index=False, sheet_name=sheet_name)
     writer.close()
